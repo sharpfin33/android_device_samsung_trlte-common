@@ -133,9 +133,6 @@ ro.telephony.call_ring.multiple=0
 # Sensors
 debug.sensors=1
 
-# Timeout failed shutdowns
-ro.build.shutdown_timeout=5
-
 # UI thread scheduling
 sys.use_fifo_ui=1
 
