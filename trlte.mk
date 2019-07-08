@@ -144,6 +144,10 @@ PRODUCT_PACKAGES += \
     FlipFlap
 endif
     
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-service.software
+
 # Graphics
 PRODUCT_PACKAGES += \
     android.hardware.configstore@1.0-service \
