@@ -173,7 +173,7 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 # SELinux
 include device/qcom/sepolicy-legacy/sepolicy.mk
 
-BOARD_SEPOLICY_DIRS += \
+BOARD_VENDOR_SEPOLICY_DIRS += \
     $(COMMON_PATH)/sepolicy
 
 # Wifi
