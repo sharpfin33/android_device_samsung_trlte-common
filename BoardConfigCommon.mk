@@ -21,6 +21,7 @@ COMMON_PATH := device/samsung/trlte-common
 
 # Architecture
 TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT_RUNTIME := krait
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
