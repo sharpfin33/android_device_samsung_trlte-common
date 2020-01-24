@@ -318,6 +318,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/_hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/_hals.conf
 
+
+# Surfaceflinger
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+
 # Touch
 PRODUCT_PACKAGES += \
     vendor.lineage.touch@1.0-service.samsung
