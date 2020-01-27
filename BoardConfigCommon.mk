@@ -163,7 +163,6 @@ BOARD_GLOBAL_CPPFLAGS += -DQCOM_BSP
 
 # Radio
 BOARD_PROVIDES_LIBRIL := true
-TARGET_RIL_VARIANT := caf
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
