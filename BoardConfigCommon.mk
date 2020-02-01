@@ -78,6 +78,14 @@ EXCLUDE_SERIF_FONTS := true
 # Extended Filesystem Support
 TARGET_EXFAT_DRIVER := sdfat
 
+# Filesystem
+BOARD_ROOT_EXTRA_SYMLINKS := /data/tombstones:/tombstones
+BOARD_ROOT_EXTRA_FOLDERS := \
+    firmware-modem \
+    firmware \
+    efs \
+    cache
+
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
