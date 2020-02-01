@@ -18,30 +18,11 @@
 #ifndef _BDROID_BUILDCFG_H
 #define _BDROID_BUILDCFG_H
 
-#include <cutils/properties.h>
-#include <string.h>
+#define BTM_DEF_LOCAL_NAME   "Samsung Galaxy Note 4"
 
-static inline const char* BtmGetDefaultName()
-{
-    char product_device[PROPERTY_VALUE_MAX];
-    property_get("ro.product.device", product_device, "");
-
-    if (strstr(product_device, "trlte"))
-        return "Samsung Galaxy Note 4";
-    if (strstr(product_device, "tblte"))
-        return "Samsung Galaxy Note Edge";
-
-    // Fallback to ro.product.model
-    return "";
-}
-
-#undef PROPERTY_VALUE_MAX
-
-#define BTM_DEF_LOCAL_NAME BtmGetDefaultName()
-
+#define BTA_DISABLE_DELAY 1000 /* in milliseconds */
 #define BTE_BLE_STACK_CONF_FILE "/etc/bluetooth/bt_stack.conf"
-
-/* Handsfree device */
-#define BTA_DM_COD { 0x20, 0x04, 0x08 }
+#define BLE_VND_INCLUDED   TRUE     /* Enable WBS */
+#define BTIF_HF_WBS_PREFERRED TRUE  /* Use WBS    */
 
 #endif
