@@ -131,6 +131,9 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/vendor/bin/mm-qcamera-daemon=22 \
     /system/vendor/bin/hw/rild=27
 
+TARGET_LD_SHIM_LIBS := \
+    /system/vendor/lib/libsec-ril.so|/system/vendor/lib/libprotobuf-cpp-full.so
+
 # Media
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
 
