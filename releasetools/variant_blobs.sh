@@ -43,18 +43,18 @@ fi
 
 echo "Device with bootloader $BOOTLOADER requires $VARIANT blobs"
 
-BLOBBASE=/system/blobs/$VARIANT
+BLOBBASE=/system/system/blobs/$VARIANT
 
 if [ -d $BLOBBASE ]; then
   cd $BLOBBASE
 
   for FILE in `find . -type f` ; do
-    mkdir -p `dirname /system/$FILE`
-    better_copy $FILE /system/$FILE
+    mkdir -p `dirname /system/system/$FILE`
+    better_copy $FILE /system/system/$FILE
   done
 
   for FILE in vendor/bin/* ; do
-    chmod 755 /system/$FILE
+    chmod 755 /system/system/$FILE
   done
 else
   echo "Expected source directory does not exist!"
