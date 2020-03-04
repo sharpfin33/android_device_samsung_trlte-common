@@ -101,10 +101,6 @@ DEVICE_MATRIX_FILE := $(COMMON_PATH)/compatibility_matrix.xml
 # Include path
 TARGET_SPECIFIC_HEADER_PATH := $(COMMON_PATH)/include
 
-# Init
-TARGET_INIT_VENDOR_LIB := libinit_apq8084
-TARGET_RECOVERY_DEVICE_MODULES := libinit_apq8084
-
 # Kernel
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 dwc3_msm.cpu_to_affin=1
