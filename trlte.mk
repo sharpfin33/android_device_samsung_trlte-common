@@ -152,12 +152,9 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-impl
-
-# GPS
-PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl.apq8084 \
-    android.hardware.gnss@1.0-service.apq8084
+    android.hardware.gnss@1.0-service.apq8084 \
+    libshim_loc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/flp.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/flp.conf \
