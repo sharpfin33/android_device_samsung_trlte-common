@@ -125,7 +125,8 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/vendor/bin/hw/rild=27
 
 TARGET_LD_SHIM_LIBS := \
-    /system/vendor/lib/libsec-ril.so|/system/vendor/lib/libprotobuf-cpp-full.so
+    /system/vendor/lib/libsec-ril.so|/system/vendor/lib/libprotobuf-cpp-full.so \
+    /system/vendor/lib/libloc_eng.so|/system/lib/libshim_loc.so
 
 # Media
 TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
