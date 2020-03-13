@@ -447,6 +447,9 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
+    # Create directory used by loc_launcher
+    mkdir /data/misc/location/mq 0770 gps gps
+
     setprop wifi.interface wlan0
 
     # Allow QMUX daemon to assign port open wait time
