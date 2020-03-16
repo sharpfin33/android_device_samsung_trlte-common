@@ -61,6 +61,7 @@ subsystem msm_camera
 
 /dev/radio0               0640   system     system
 /dev/rfcomm0              0660   bluetooth  bluetooth
+/dev/gss                  0660   gps        gps
 /dev/ttyUSB0              0660   radio	    radio
 /dev/smdcntl0             0640   radio      radio
 /dev/smdcntl1             0640   radio      radio
