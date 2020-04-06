@@ -86,6 +86,9 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     efs \
     cache
 
+# Fingerprint
+BUILD_FINGERPRINT := samsung/trltexx/trlte:6.0.1/MMB29M/N910FXXU1DRD1:user/release-keys
+
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
