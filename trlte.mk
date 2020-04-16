@@ -175,11 +175,6 @@ PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
     consumerir.apq8084
 
-# IPv6 tethering
-PRODUCT_PACKAGES += \
-    ebtables \
-    ethertypes
-
 # IRSC
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
