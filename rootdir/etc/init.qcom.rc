@@ -1230,7 +1230,7 @@ service rmt_storage /system/vendor/bin/rmt_storage
 
 service qmuxd /system/vendor/bin/qmuxd
     class core
-    user root
+    user radio
     group radio audio bluetooth gps diag log
 
 service mdm_helper /system/vendor/bin/mdm_helper
