@@ -1356,8 +1356,8 @@ service sec-sh /system/vendor/bin/sh /system/vendor/etc/init.sec.boot.sh
 # SENSOR FRAMEWORK : starts fingerprintService
 service vcsFPService /system/vendor/bin/vcsFPService
     class late_start
-    user system
-    group system
+    user root
+    group system input wakelock readproc
 
 on property:persist.sys.ssr.restart_level=1
     write /sys/module/subsystem_restart/parameters/restart_level 1
