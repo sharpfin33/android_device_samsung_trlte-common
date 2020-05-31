@@ -439,6 +439,8 @@
     provisioning, availability etc -->
     <bool name="config_carrier_vt_available">true</bool>
 
+    <!-- Use home button as wake button-->
+    <bool name="config_enableHomeButtonWake">true</bool>
 
     <!-- Whether to enable Qualcomm Boost Framework -->
     <bool name="config_enableQcCpuBoost">true</bool>
@@ -455,4 +457,7 @@
          vendor fingerprint HAL implementations. -->
     <bool name="config_fingerprintPostResetRunnableForAllClients">true</bool>
 
+    <!-- do not use H265 encoder for screen recordings -->
+    <bool name="config_useNewScreenRecEncoder">false</bool>
+    
 </resources>

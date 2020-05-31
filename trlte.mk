@@ -117,10 +117,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.apq8084 \
     memtrack.apq8084
 
-# Doze service
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
@@ -137,12 +133,6 @@ PRODUCT_COPY_FILES += \
 
 # First Model API LEVEL
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
-    
-ifeq ($(filter trlte trltecan trlteduos trltespr trltetmo trlteusc trltevzw trltexx,$(TARGET_DEVICE)),)
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
-endif
     
 # Graphics
 PRODUCT_PACKAGES += \
@@ -170,6 +160,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
    android.hardware.health@2.0-service.samsung8084
 
+# IMS
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager
+    
 # IR Blaster
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
@@ -201,14 +195,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/idc/sec_e-pen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_e-pen.idc \
     $(LOCAL_PATH)/idc/sec_touchscreen.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/sec_touchscreen.idc
 
+# LatinIME lib
+PRODUCT_PACKAGES += \
+    libjni_latinimegoogle
+    
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl.samsung \
     android.hardware.light@2.0-service.samsung
-
-# LiveDisplay
-PRODUCT_PACKAGES += \
-    vendor.lineage.livedisplay@2.0-service.apq8084
 
 # Media
 PRODUCT_PACKAGES += \
@@ -282,7 +276,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
-    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml 
+    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml \
+    frameworks/native/data/etc/android.hardware.telephony.carrierlock.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.carrierlock.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
 
 # Power HAL
 PRODUCT_PACKAGES += \
@@ -328,9 +324,15 @@ PRODUCT_SOONG_NAMESPACES += $(LOCAL_PATH)
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 
-# Touch
+# Telephony
 PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung
+    ims-ext-common \
+    ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \
+    qti_telephony_utils.xml \
+    telephony-ext
 
 # Thermal engine
 PRODUCT_COPY_FILES += \
