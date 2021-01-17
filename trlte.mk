@@ -170,6 +170,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
    android.hardware.health@2.0-service.samsung8084
 
+# HIDL
+PRODUCT_PACKAGES += \
+    libhidltransport \
+    libhwbinder
+
 # IR Blaster
 PRODUCT_PACKAGES += \
     android.hardware.ir@1.0-impl \
