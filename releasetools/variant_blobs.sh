@@ -43,6 +43,8 @@ fi
 
 echo "Device with bootloader $BOOTLOADER requires $VARIANT blobs"
 
+mount /dev/block/bootdevice/by-name/system -t ext4 /system
+
 BLOBBASE=/system/system/blobs/$VARIANT
 
 if [ -d $BLOBBASE ]; then
