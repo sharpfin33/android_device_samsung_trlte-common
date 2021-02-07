@@ -1228,17 +1228,20 @@ service qmuxd /system/vendor/bin/qmuxd
     class core
     user root
     group radio audio bluetooth gps diag log
+    seclabel u:r:qmuxd:s0
 
 service mdm_helper /system/vendor/bin/mdm_helper
     class core
     onrestart setprop ro.service.mdm_helper_restarted "true"
     group root system radio oem_2950 wakelock
+    seclabel u:r:mdm_helper:s0
 
 service mdm_helper_proxy /system/vendor/bin/mdm_helper_proxy
     class core
     user system
     group system wakelock
     disabled
+    seclabel u:r:mdm_helper_proxy:s0
 
 on property:init.svc.ril-daemon=running
     setprop ro.mdm_helper_proxy_req true

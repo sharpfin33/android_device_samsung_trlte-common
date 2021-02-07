@@ -5,7 +5,6 @@
 # data files
 /data/.cid.info                                         u:object_r:wifi_data_file:s0
 /data/.wifiver.info                                     u:object_r:wifi_data_file:s0
-/data/validity(/.*)?                                    u:object_r:vfsspi_data_file:s0
 
 # device nodes
 /dev/batch_io                                           u:object_r:sensors_device:s0
@@ -15,19 +14,21 @@
 /dev/rfkill                                             u:object_r:wlan_device:s0
 /dev/sec-nfc                                            u:object_r:nfc_device:s0
 /dev/ttyHS3                                             u:object_r:audio_device:s0
-/dev/vfsspi                                             u:object_r:vfsspi_device:s0
 
 # efs files
 /efs/bluetooth(/.*)?                                    u:object_r:bluetooth_efs_file:s0
 /efs/wifi(/.*)?                                         u:object_r:wifi_efs_file:s0
 
 # executeables
-/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service.apq8084               u:object_r:hal_sensors_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software          u:object_r:hal_gatekeeper_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@1\.0-service.apq8084                  u:object_r:hal_gnss_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.samsung   	u:object_r:hal_light_default_exec:s0
-/(vendor|system/vendor)/bin/hw/vendor\.lineage\.touch@1\.0-service\.samsung               u:object_r:hal_lineage_touch_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.samsung                   u:object_r:hal_ir_default_exec:s0
+/(vendor|system/vendor)/bin/sensorhubservice            u:object_r:sensorhubservice_exec:s0
+/(vendor|system/vendor)/bin/timekeep                    u:object_r:timekeep_exec:s0
+/(vendor|system/vendor)/bin/wifiloader                  u:object_r:wifiloader_exec:s0
+
+# fingerprint
+/(vendor|system/vendor)/bin/vcsFPService                u:object_r:vcs_exec:s0
+/data/validity(/.*)?                                    u:object_r:vcs_data_file:s0
+/dev/validity(/.*)?                                     u:object_r:vcs_device:s0
+/dev/vfsspi                                             u:object_r:vcs_device:s0
 
 # firmware
 /system/vendor/firmware/bcm(.*).hcd                     u:object_r:bt_fw_file:s0
@@ -38,8 +39,17 @@
 /system/vendor/firmware/libpn547_fw.so                  u:object_r:nfc_fw_file:s0
 
 # firmware files
-/firmware-modem(/.*)?					u:object_r:firmware_file:s0
-/tombstones(/.*)?					u:object_r:firmware_file:s0
+/firmware-modem(/.*)?                                   u:object_r:firmware_file:s0
+/tombstones(/.*)?                                       u:object_r:firmware_file:s0
+
+# hals
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.0-service\.apq8084 u:object_r:hal_fingerprint_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service\.samsung8084             u:object_r:hal_sensors_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software             u:object_r:hal_gatekeeper_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@1\.0-service\.apq8084                    u:object_r:hal_gnss_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.samsung                      u:object_r:hal_ir_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.samsung                   u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.apq8084               u:object_r:hal_lineage_livedisplay_qti_exec:s0
 
 # sockets
 /data/cam_socket.*                                      u:object_r:camera_socket:s0
@@ -133,3 +143,7 @@
 # sysfs - usb
 /sys/devices/[a-f0-9]+.ssusb/[a-f0-9]+.dwc3/gadget/lun[0-9]+(/.*)?                           u:object_r:sysfs_android_usb:s0
 /sys/devices/virtual/host_notify/usb_otg(/.*)?                                               u:object_r:sysfs_usb_otg:s0
+
+# wifi
+#/data/vendor/wifi(/.*)?                                 u:object_r:wifi_vendor_data_file:s0
+/sys/module/dhd/parameters(/.*)?                        u:object_r:sysfs_wifi_writeable:s0
