@@ -34,3 +34,6 @@ allow system_server {
     sysfs_sec_led
     sysfs_sec_touchkey
 }:file w_file_perms;
+
+get_prop(system_server, userspace_reboot_exported_prop);
+get_prop(system_server, userspace_reboot_config_prop);
