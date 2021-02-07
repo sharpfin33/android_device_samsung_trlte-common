@@ -1379,3 +1379,5 @@ on property:service.bootanim.exit=1
     write /proc/sys/net/ipv6/conf/rmnet_mhi3/accept_ra 2
     write /proc/sys/net/ipv6/conf/rmnet_usb0/accept_ra 2
 
+on property:apexd.status=ready
+    mount none /system/etc/swcodec/ld.config.txt /apex/com.android.media.swcodec/etc/ld.config.txt bind
