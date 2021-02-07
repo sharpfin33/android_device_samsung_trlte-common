@@ -42,6 +42,7 @@ TARGET_SCREEN_WIDTH := 1440
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio.service \
     android.hardware.audio@2.0-impl \
     android.hardware.audio.effect@2.0-impl \
     audio_policy.apq8084 \
@@ -85,6 +86,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
+    android.hardware.bluetooth@1.0-service \
     libbt-vendor \
     bt_stack.conf \
     bt_did.conf \
