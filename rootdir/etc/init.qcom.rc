@@ -1241,7 +1241,7 @@ service mdm_helper_proxy /system/vendor/bin/mdm_helper_proxy
     user system
     group system wakelock
     disabled
-    seclabel u:r:mdm_helper_proxy:s0
+    seclabel u:r:mdm_helper:s0
 
 on property:init.svc.ril-daemon=running
     setprop ro.mdm_helper_proxy_req true
