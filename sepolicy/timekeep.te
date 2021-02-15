@@ -16,3 +16,5 @@ allow timekeep sysfs_rtc:dir search;
 allow timekeep sysfs_rtc:{ file lnk_file } r_file_perms;
 
 r_dir_file(timekeep, sysfs_timekeep)
+
+allow timekeep self:capability dac_override;
