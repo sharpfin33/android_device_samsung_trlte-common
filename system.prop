@@ -27,6 +27,9 @@ ro.systemui.burn_in_protection=true
 # Camera
 camera2.portability.force_api=1
 
+# Charger
+ro.charger.disable_init_blank=true
+
 # Dalvik heap
 dalvik.vm.heapstartsize=8m
 dalvik.vm.heapgrowthlimit=256m
