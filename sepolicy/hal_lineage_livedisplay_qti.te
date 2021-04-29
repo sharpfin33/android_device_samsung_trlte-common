@@ -1,0 +1,6 @@
+#============= hal_lineage_livedisplay_qti ==============
+allow hal_lineage_livedisplay_qti sysfs_graphics:dir search;
+allow hal_lineage_livedisplay_qti sysfs_graphics:file { open read write };
+allow hal_lineage_livedisplay_qti sysfs_livedisplay_tuneable:file { getattr open read write };
+allow hal_lineage_livedisplay_qti sysfs_mdnie:dir search;
+allow hal_lineage_livedisplay_qti sysfs_mdnie:file { open read write };

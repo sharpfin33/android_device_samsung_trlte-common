@@ -1,0 +1,4 @@
+#============= zygote ==============
+allow zygote bluetooth_prop:file { getattr open read };
+allow zygote exported_camera_prop:file { getattr open read };
+allow zygote proc_cmdline:file { getattr open read };

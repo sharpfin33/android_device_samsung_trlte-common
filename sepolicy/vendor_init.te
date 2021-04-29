@@ -1,0 +1,9 @@
+#============= vendor_init ==============
+allow vendor_init dalvikcache_data_file:dir search;
+allow vendor_init firmware_file:dir { create setattr };
+allow vendor_init firmware_file:lnk_file read;
+allow vendor_init sysfs:dir relabelfrom;
+allow vendor_init sysfs:file relabelfrom;
+allow vendor_init system_data_file:file { create open setattr write };
+allow vendor_init system_data_file:lnk_file { create unlink };
+allow vendor_init wifi_data_file:file { create getattr open setattr write };
