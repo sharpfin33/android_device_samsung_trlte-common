@@ -6,3 +6,5 @@ allow vendor_init sysfs:file relabelfrom;
 allow vendor_init system_data_file:file { create open setattr write };
 allow vendor_init system_data_file:lnk_file { create unlink };
 allow vendor_init wifi_data_file:file { create getattr open setattr write };
+allow vendor_init sec_efs_file:dir relabelfrom;
+allow vendor_init sec_efs_file:file relabelfrom;

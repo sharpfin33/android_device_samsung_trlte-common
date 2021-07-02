@@ -1,0 +1,17 @@
+allow recovery bootchart_data_file:dir { getattr open read };
+allow recovery dalvikcache_data_file:dir { open read remove_name write };
+allow recovery dalvikcache_data_file:file unlink;
+allow recovery default_prop:property_service set;
+allow recovery device:dir { add_name create setattr write };
+allow recovery init:file read;
+allow recovery logcat_exec:file { execute execute_no_trans };
+allow recovery recovery_data_file:dir { getattr open read };
+allow recovery rootfs:dir { remove_name rmdir write };
+allow recovery self:capability sys_ptrace;
+allow recovery self:netlink_kobject_uevent_socket read;
+allow recovery selinuxfs:file write;
+allow recovery tmpfs:lnk_file create;
+allow recovery unlabeled:file execute;
+allow recovery vfat:file { open read };
+allow recovery adb_keys_file:dir getattr;
+allow recovery app_data_file:dir { getattr open read };

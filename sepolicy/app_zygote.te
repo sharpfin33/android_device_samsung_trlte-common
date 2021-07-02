@@ -1,0 +1,3 @@
+allow app_zygote ion_device:chr_file getattr;
+allow app_zygote resourcecache_data_file:dir search;
+allow app_zygote zygote_exec:file read;

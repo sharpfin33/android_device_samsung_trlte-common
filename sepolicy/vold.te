@@ -1,5 +1,7 @@
 allow vold efs_file:dir rw_dir_perms;
 allow vold efs_file:file create;
+allow vold sysfs_mmc_host:file write;
+allow vold hal_bootctl_hwservice:hwservice_manager find;
 
 allow vold {
     block_device
