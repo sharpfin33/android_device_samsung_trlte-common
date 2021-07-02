@@ -22,4 +22,4 @@ allow vcs firmware_file:dir r_dir_perms;
 allow vcs firmware_file:file r_file_perms;
 
 allow vcs ion_device:chr_file { ioctl open read };
-allow vcs self:capability dac_override;
+allow vcs self:capability { dac_override kill sys_resource };

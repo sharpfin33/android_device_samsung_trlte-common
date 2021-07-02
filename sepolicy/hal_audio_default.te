@@ -1,5 +1,6 @@
 allow hal_audio_default qmuxd:unix_stream_socket connectto;
-allow hal_audio_default qmuxd_socket:dir { add_name search write };
-allow hal_audio_default qmuxd_socket:sock_file { create setattr write };
-allow hal_audio_default self:socket { create ioctl read };
+allow hal_audio_default qmuxd_socket:dir { add_name remove_name search write w_dir_perms };
+allow hal_audio_default qmuxd_socket:sock_file { create create_file_perms setattr write };
+allow hal_audio_default self:socket { create create_socket_perms ioctl read };
 allow hal_audio_default unlabeled:file { getattr open read };
+allow hal_audio_default sysfs:file { open read };
