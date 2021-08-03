@@ -123,6 +123,7 @@ rild.libpath=/system/vendor/lib/libsec-ril.so
 ro.ril.telephony.qan_resp_strings=6
 ro.telephony.mms_data_profile=5
 persist.radio.add_power_save=1
+ro.telephony.default_network=9
 
 # Recovery updater
 persist.vendor.recovery_update=false
