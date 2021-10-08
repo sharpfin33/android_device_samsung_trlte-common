@@ -48,6 +48,9 @@ on init
 
     write /proc/sys/vm/page-cluster 0
 
+    # Fastcharge switch
+    chown system radio /sys/class/sec/switch/afc_disable
+    
 on fs
     mount_all /vendor/etc/fstab.qcom
 
@@ -1165,6 +1168,10 @@ on boot
     chown bluetooth bluetooth /dev/btlock
 
     # on userdebug and eng builds, permision change mhl sysfs
+    
+    # Switch Device
+    chown system radio /sys/class/sec/switch/afc_disable
+    
 on property:ro.debuggable=1
     chmod 0666 /sys/class/mhl/timing
     chmod 0666 /sys/class/mhl/swing_v2
