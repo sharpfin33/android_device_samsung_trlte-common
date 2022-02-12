@@ -82,7 +82,7 @@ PRODUCT_PACKAGES += \
 # APEX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt
-    
+
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
@@ -124,7 +124,7 @@ PRODUCT_PACKAGES += \
 # FastCharge
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.samsung
-    
+
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.0-service.apq8084 \
@@ -136,13 +136,13 @@ PRODUCT_COPY_FILES += \
 
 # First Model API LEVEL
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
-    
+
 ifeq ($(filter trlte trltecan trlteduos trltespr trltetmo trlteusc trltevzw trltexx,$(TARGET_DEVICE)),)
 # FlipFlap
 PRODUCT_PACKAGES += \
     FlipFlap
 endif
-    
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service.software
@@ -289,7 +289,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
-    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml 
+    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
 
 # Power HAL
 PRODUCT_PACKAGES += \
@@ -388,6 +388,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/filter_ie:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/filter_ie \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
+
+# Custome seccomp_policy for audio, from Havoc source framewoks av: this fixes permission issue towards seccomp_policys by removeing code_coverage.arm.policy
+$(shell cp -r device/samsung/trlte-common/seccomp/mediacodec-arm.policy frameworks/av/services/mediacodec/seccomp_policy)
+$(shell cp -r device/samsung/trlte-common/seccomp/mediaswcodec-arm.policy frameworks/av/services/mediacodec/seccomp_policy)
+$(shell cp -r device/samsung/trlte-common/seccomp/mediaextractor-arm.policy frameworks/av/services/mediaextractor/seccomp_policy)
 
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
