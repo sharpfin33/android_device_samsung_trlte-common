@@ -167,3 +167,13 @@ persist.sys.usb.config=mtp,adb
 ro.adb.secure=0
 ro.debuggable=1
 ro.secure=0
+
+# Blurs
+
+# set Blur
+PRODUCT_PRODUCT_PROPERTIES += \
+		ro.sf.blurs_are_expensive=1
+
+# override to suit our needs
+PRODUCT_PRODUCT_OVERRIDES += \
+		ro.sf.blurs_are_expensive=1
