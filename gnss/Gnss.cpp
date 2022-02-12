@@ -198,13 +198,10 @@ void Gnss::gpsSvStatusCb(GpsSvStatus* svInfo) {
     uint32_t ephemerisMask = svInfo->ephemeris_mask;
     uint32_t almanacMask = svInfo->almanac_mask;
     uint32_t usedInFixMask = svInfo->used_in_fix_mask;
-<<<<<<< HEAD
     // Our HALs report a bigger svinfo struct, HaxxSvStatus, which includes a GLONASS and
     // a Beidou usage mask
     uint32_t gloUsedInFixMask = *(&(svInfo->used_in_fix_mask) + 1); // the next int
     uint64_t bdsUsedInFixMask = *(&(svInfo->used_in_fix_mask) + 2); // the next int
-=======
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
     /*
      * Conversion from GpsSvInfo to IGnssCallback::GnssSvInfo happens below.
      */
@@ -238,7 +235,6 @@ void Gnss::gpsSvStatusCb(GpsSvStatus* svInfo) {
         info.svFlag = static_cast<uint8_t>(IGnssCallback::GnssSvFlags::NONE);
 
         /*
-<<<<<<< HEAD
          * GPS, GLONASS and Beidou info is valid for these fields, as these masks
          * are just 32/64 bits, by GPS prn, another for GLONASS prn and another
          * for Beidou prn.
@@ -246,12 +242,6 @@ void Gnss::gpsSvStatusCb(GpsSvStatus* svInfo) {
         if (info.constellation == GnssConstellationType::GPS ||
             info.constellation == GnssConstellationType::GLONASS ||
             info.constellation == GnssConstellationType::BEIDOU) {
-=======
-         * Only GPS info is valid for these fields, as these masks are just 32
-         * bits, by GPS prn.
-         */
-        if (info.constellation == GnssConstellationType::GPS) {
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
             int32_t svidMask = (1 << (info.svid - 1));
             if ((ephemerisMask & svidMask) != 0) {
                 info.svFlag |= IGnssCallback::GnssSvFlags::HAS_EPHEMERIS_DATA;
@@ -259,16 +249,12 @@ void Gnss::gpsSvStatusCb(GpsSvStatus* svInfo) {
             if ((almanacMask & svidMask) != 0) {
                 info.svFlag |= IGnssCallback::GnssSvFlags::HAS_ALMANAC_DATA;
             }
-<<<<<<< HEAD
             if ((info.constellation == GnssConstellationType::GPS &&
                  (usedInFixMask & svidMask) != 0) ||
                 (info.constellation == GnssConstellationType::GLONASS &&
                  (gloUsedInFixMask & svidMask) != 0) ||
                 (info.constellation == GnssConstellationType::BEIDOU &&
                  (bdsUsedInFixMask & svidMask) != 0)) {
-=======
-            if ((usedInFixMask & svidMask) != 0) {
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
                 info.svFlag |= IGnssCallback::GnssSvFlags::USED_IN_FIX;
             }
         }

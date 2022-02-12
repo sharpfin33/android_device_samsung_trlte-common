@@ -1,11 +1,8 @@
 allow vold efs_file:dir rw_dir_perms;
 allow vold efs_file:file create;
-<<<<<<< HEAD
 allow vold sysfs_mmc_host:file write;
 allow vold hal_bootctl_hwservice:hwservice_manager find;
 allow vold rootfs:dir { setattr write };
-=======
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 
 allow vold {
     block_device

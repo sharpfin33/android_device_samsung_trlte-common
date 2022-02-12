@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-#============= servicemanager ==============
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 allow servicemanager hal_power_default:dir search;
 allow servicemanager hal_power_default:file { open read };
 allow servicemanager hal_power_default:process getattr;

@@ -84,21 +84,11 @@ BOARD_ROOT_EXTRA_FOLDERS := \
     firmware-modem \
     persist
 
-<<<<<<< HEAD
-=======
-# Fingerprint
-BUILD_FINGERPRINT := samsung/trltexx/trlte:6.0.1/MMB29M/N910FXXU1DRD1:user/release-keys
-
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
 # Hardware Composer
 MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
-<<<<<<< HEAD
-=======
-NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
 # Filesystem
@@ -124,10 +114,6 @@ BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 TARGET_KERNEL_CONFIG := apq8084_sec_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/apq8084
-<<<<<<< HEAD
-=======
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 BOARD_RAMDISK_OFFSET     := 0x02600000
 BOARD_KERNEL_TAGS_OFFSET := 0x02400000
 BOARD_SECOND_OFFSET      := 0x00f00000

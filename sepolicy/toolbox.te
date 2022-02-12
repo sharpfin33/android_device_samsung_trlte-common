@@ -1,7 +1,4 @@
 allow toolbox init:fifo_file { read write getattr };
 allow toolbox rmnet_mux_prop:file r_file_perms;
-<<<<<<< HEAD
 allow toolbox proc_uid_time_in_state:file getattr;
 allow toolbox rootfs:dir { open read };
-=======
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204

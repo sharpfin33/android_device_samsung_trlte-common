@@ -1,8 +1,3 @@
-<<<<<<< HEAD
 allow qmuxd system_file:file entrypoint;
 allow qmuxd sysfs:dir { open read };
 allow qmuxd sysfs:file read;
-=======
-#============= qmuxd ==============
-allow qmuxd system_file:file entrypoint;
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204

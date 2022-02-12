@@ -123,10 +123,7 @@ rild.libpath=/system/vendor/lib/libsec-ril.so
 ro.ril.telephony.qan_resp_strings=6
 ro.telephony.mms_data_profile=5
 persist.radio.add_power_save=1
-<<<<<<< HEAD
 ro.telephony.default_network=9
-=======
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 
 # Recovery updater
 persist.vendor.recovery_update=false
@@ -137,12 +134,6 @@ ro.telephony.call_ring.multiple=0
 # Sensors
 debug.sensors=1
 
-<<<<<<< HEAD
-=======
-# Timeout failed shutdowns
-ro.build.shutdown_timeout=5
-
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 # UI thread scheduling
 sys.use_fifo_ui=1
 

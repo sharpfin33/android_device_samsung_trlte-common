@@ -2,8 +2,4 @@ allow mediaserver sysfs_camera:dir search;
 allow mediaserver sysfs_camera:file r_file_perms;
 allow mediaserver vendor_file:file execmod;
 
-<<<<<<< HEAD
-=======
-#============= mediaserver ==============
->>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 allow mediaserver system_data_root_file:sock_file write;
