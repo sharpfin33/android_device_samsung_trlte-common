@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+#============= zygote ==============
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 allow zygote bluetooth_prop:file { getattr open read };
 allow zygote exported_camera_prop:file { getattr open read };
 allow zygote proc_cmdline:file { getattr open read };

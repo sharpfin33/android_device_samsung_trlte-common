@@ -1,1 +1,5 @@
+<<<<<<< HEAD
+=======
+#============= hal_health_default ==============
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 allow hal_health_default sysfs:file { getattr open read };

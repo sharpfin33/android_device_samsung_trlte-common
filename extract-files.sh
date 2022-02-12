@@ -31,6 +31,7 @@ if [ ! -f "$HELPER" ]; then
 fi
 . "$HELPER"
 
+<<<<<<< HEAD
 function blob_fixup() {
     case "${1}" in
         vendor/lib/mediadrm/libwvdrmengine.so)
@@ -39,6 +40,8 @@ function blob_fixup() {
     esac
 }
 
+=======
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 if [ $# -eq 0 ]; then
     SRC=adb
 else

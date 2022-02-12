@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
+#============= vendor_init ==============
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 allow vendor_init dalvikcache_data_file:dir search;
 allow vendor_init firmware_file:dir { create setattr };
 allow vendor_init firmware_file:lnk_file read;
 allow vendor_init sysfs:dir relabelfrom;
 allow vendor_init sysfs:file relabelfrom;
+<<<<<<< HEAD
 allow vendor_init system_data_root_file:file { create open setattr write };
 allow vendor_init system_data_root_file:lnk_file { create unlink };
 allow vendor_init wifi_data_file:file { create getattr open setattr write };
@@ -11,3 +16,8 @@ allow vendor_init sec_efs_file:file relabelfrom;
 allow vendor_init unlabeled:dir search;
 allow vendor_init unlabeled:file setattr;
 allow vendor_init rootfs:dir setattr;
+=======
+allow vendor_init system_data_file:file { create open setattr write };
+allow vendor_init system_data_file:lnk_file { create unlink };
+allow vendor_init wifi_data_file:file { create getattr open setattr write };
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204

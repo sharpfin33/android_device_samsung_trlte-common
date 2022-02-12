@@ -10,6 +10,11 @@ LOCAL_SRC_FILES := \
 
 LOCAL_SHARED_LIBRARIES := \
     libhardware \
+<<<<<<< HEAD
+=======
+    libnativewindow \
+    libgui \
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
     liblog \
     libcamera_client \
     libgui \

@@ -24,7 +24,11 @@ $(call inherit-product-if-exists, vendor/samsung/trlte-common/trlte-common-vendo
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
+<<<<<<< HEAD
     $(LOCAL_PATH)/overlay-lineage
+=======
+    $(LOCAL_PATH)/overlay-havoc
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 
 ifneq ($(RR_BUILD),)
 DEVICE_PACKAGE_OVERLAYS += \
@@ -82,7 +86,11 @@ PRODUCT_PACKAGES += \
 # APEX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/ld.config.txt:$(TARGET_COPY_OUT_SYSTEM)/etc/swcodec/ld.config.txt
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl \
@@ -103,7 +111,18 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     camera.apq8084 \
     libxml2 \
+<<<<<<< HEAD
     Snap
+=======
+    snap
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/external_camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/external_camera_config.xml
+
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 
 # Display
 PRODUCT_PACKAGES += \
@@ -121,10 +140,13 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
     android.hardware.drm@1.0-service
 
+<<<<<<< HEAD
 # FastCharge
 PRODUCT_PACKAGES += \
     vendor.lineage.fastcharge@1.0-service.samsung
 
+=======
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.0-service.apq8084 \
@@ -136,13 +158,21 @@ PRODUCT_COPY_FILES += \
 
 # First Model API LEVEL
 $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_k.mk)
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 ifeq ($(filter trlte trltecan trlteduos trltespr trltetmo trlteusc trltevzw trltexx,$(TARGET_DEVICE)),)
 # FlipFlap
 PRODUCT_PACKAGES += \
     FlipFlap
 endif
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0-service.software
@@ -289,7 +319,11 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.vulkan.level-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.level-0.xml \
     frameworks/native/data/etc/android.hardware.vulkan.version-1_1.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.version-1_1.xml \
     frameworks/native/data/etc/android.hardware.vulkan.compute-0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.vulkan.compute-0.xml \
+<<<<<<< HEAD
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
+=======
+    frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml 
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 
 # Power HAL
 PRODUCT_PACKAGES += \
@@ -344,9 +378,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vndk_package
 
+<<<<<<< HEAD
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm/arch-arm-armv7-a-neon/shared/vndk-core/libprotobuf-cpp-lite.so:$(TARGET_COPY_OUT_VENDOR)/lib/libprotobuf-cpp-lite-v29.so
 
+=======
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 # TimeKeep
 PRODUCT_PACKAGES += \
     timekeep \
@@ -389,10 +426,13 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 
+<<<<<<< HEAD
 # Custome seccomp_policy for audio, from Havoc source framewoks av: this fixes permission issue towards seccomp_policys by removeing code_coverage.arm.policy
 $(shell cp -r device/samsung/trlte-common/seccomp/mediacodec-arm.policy frameworks/av/services/mediacodec/seccomp_policy)
 $(shell cp -r device/samsung/trlte-common/seccomp/mediaswcodec-arm.policy frameworks/av/services/mediacodec/seccomp_policy)
 $(shell cp -r device/samsung/trlte-common/seccomp/mediaextractor-arm.policy frameworks/av/services/mediaextractor/seccomp_policy)
 
+=======
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)

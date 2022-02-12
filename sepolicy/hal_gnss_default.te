@@ -1,9 +1,17 @@
 allow hal_gnss_default vndbinder_device:chr_file rw_file_perms;
+<<<<<<< HEAD
 allow hal_gnss_default sysfs_batteryinfo:dir search;
 allow hal_gnss_default sysfs_batteryinfo:file { getattr open write };
 #access to /sys/devices/soc0/soc_id and /sys/devices/soc0/hw_platform
 allow hal_gnss sysfs_socinfo:dir search;
 allow hal_gnss sysfs_socinfo:file { read open getattr };
+=======
+
+#access to /sys/devices/soc0/soc_id and /sys/devices/soc0/hw_platform
+allow hal_gnss sysfs_socinfo:dir search;
+allow hal_gnss sysfs_socinfo:file { read open getattr };
+
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 userdebug_or_eng(`
   allow hal_gnss diag_device:chr_file { read write open ioctl};
 ')

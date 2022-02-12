@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 allow hal_power_default sysfs_batteryinfo:dir search;
 allow hal_power_default sysfs_batteryinfo:file { open write };
 allow hal_power_default sysfs:file { open write };
 allow hal_power_default sysfs_hal_pwr:file w_file_perms;
 allow hal_power_default sysfs_input:dir search;
 allow hal_power_default sysfs_input:file write;
+=======
+allow hal_power_default sysfs_hal_pwr:file w_file_perms;
+
+#============= hal_power_default ==============
+allow hal_power_default sysfs_batteryinfo:dir search;
+allow hal_power_default sysfs_batteryinfo:file { open write };
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204

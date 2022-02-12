@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+#============= hal_light_default ==============
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 allow hal_light_default sysfs_sec_led:dir search;
 allow hal_light_default sysfs_sec_led:file { getattr open write };
 allow hal_light_default sysfs_sec_touchkey:dir search;

@@ -30,5 +30,8 @@ allow hal_sensors_default {
     sysfs_iio
     sysfs_input
 }:lnk_file read;
+<<<<<<< HEAD
 
 allow hal_sensors_default sec_efs_file:file read;
+=======
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204

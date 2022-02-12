@@ -17,4 +17,8 @@ allow timekeep sysfs_rtc:{ file lnk_file } r_file_perms;
 
 r_dir_file(timekeep, sysfs_timekeep)
 
+<<<<<<< HEAD
+=======
+#============= timekeep ==============
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 allow timekeep self:capability dac_override;

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 allow platform_app exported_audio_prop:file read;
 allow platform_app exported_camera_prop:file read;
+=======
+>>>>>>> e86b671099032ed9e454f7ca74a0966d51e92204
 allow platform_app radio_data_file:dir search;
 allow platform_app radio_data_file:file r_file_perms;
