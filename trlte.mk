@@ -223,6 +223,11 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service.apq8084
+    
+# Offmode charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    lineage_charger_res_image
 
 # Media
 PRODUCT_PACKAGES += \
