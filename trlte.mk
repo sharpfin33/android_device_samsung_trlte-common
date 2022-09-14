@@ -219,7 +219,7 @@ PRODUCT_COPY_FILES += \
 
 # Lights
 PRODUCT_PACKAGES += \
-    android.hardware.light@2.0-service.samsung
+    android.hardware.light@2.0-service.apq8084
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
