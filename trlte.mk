@@ -103,7 +103,8 @@ PRODUCT_PACKAGES += \
     camera.device@1.0-impl \
     camera.apq8084 \
     libxml2 \
-    Snap
+    Snap \
+    libgui_vendor
 
 # Display
 PRODUCT_PACKAGES += \
