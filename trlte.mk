@@ -43,20 +43,23 @@ TARGET_SCREEN_WIDTH := 1440
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl \
+    android.hardware.audio@7.0-impl:32 \
+    android.hardware.audio.effect@7.0-impl:32 \
     audio_policy.apq8084 \
-    audio.a2dp.default \
     audio.primary.apq8084 \
+    audio.a2dp.default \
     audio.r_submix.default \
     audio.usb.default \
+    libaacwrapper \
     libaudio-resampler \
+    libautohal \
     libqcomvisualizer \
     libqcompostprocbundle \
     libqcomvoiceprocessing \
-    libqcomvoiceprocessingdescriptors \
+    libvolumelistener \
     mixer_paths.xml \
-    tinymix
+    tinymix \
+    code_coverage.policy.other
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
