@@ -26,4 +26,6 @@ LOCAL_SHARED_LIBRARIES := liblog libcutils
 LOCAL_MODULE_TAGS := optional
 LOCAL_PROPRIETARY_MODULE := true
 
+LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware
+
 include $(BUILD_SHARED_LIBRARY)
