@@ -193,7 +193,7 @@ TARGET_NO_SENSOR_PERMISSION_CHECK := true
 include device/qcom/sepolicy-legacy/sepolicy.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    $(COMMON_PATH)/sepolicy
+    $(COMMON_PATH)/sepolicy/vendor
 
 # Wifi
 BOARD_HAVE_SAMSUNG_WIFI := true
