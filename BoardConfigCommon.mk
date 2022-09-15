@@ -144,6 +144,9 @@ TARGET_LD_SHIM_LIBS := \
 # Legacy memfd
 TARGET_HAS_MEMFD_BACKPORT := true
 
+# Dedupe VNDK libraries with identical core variants.
+TARGET_VNDK_USE_CORE_VARIANT := true
+
 # Low memory devices
 MALLOC_SVELTE := true
 
