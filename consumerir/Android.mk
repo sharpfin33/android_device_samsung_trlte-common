@@ -23,7 +23,7 @@ LOCAL_SRC_FILES := consumerir.c
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/include
 
-LOCAL_SHARED_LIBRARIES := liblog libcutils
+LOCAL_SHARED_LIBRARIES := liblog libcutils libhardware
 
 LOCAL_MODULE := consumerir.apq8084
 LOCAL_MODULE_RELATIVE_PATH := hw
