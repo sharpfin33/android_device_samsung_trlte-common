@@ -74,3 +74,4 @@ allow init system_file:file mounton;
 allow init efs_file:dir mounton;
 allow init proc:file setattr;
 allow init sysfs:file setattr;
+allow init proc:file write;

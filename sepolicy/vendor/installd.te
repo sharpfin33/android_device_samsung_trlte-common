@@ -1,0 +1,2 @@
+allow installd self:capability sys_ptrace;
+allow init proc:file write;

@@ -1,3 +1,4 @@
 allow hal_lineage_fastcharge_default sysfs_sec_switch:dir search;
 allow hal_lineage_fastcharge_default sysfs_sec_switch:file rw_file_perms;
 allow hal_lineage_fastcharge_default property_socket:sock_file write;
+allow hal_lineage_fastcharge_default init:unix_stream_socket connectto;

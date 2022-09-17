@@ -2,3 +2,4 @@ allow mpdecision mpctl_data_file:dir w_dir_perms;
 allow mpdecision mpctl_data_file:sock_file create_file_perms;
 
 allow mpdecision sysfs:file read;
+allow mpdecision default_prop:file read;

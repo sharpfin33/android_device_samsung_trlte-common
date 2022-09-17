@@ -4,3 +4,5 @@ allow hal_audio_default qmuxd_socket:sock_file { create create_file_perms setatt
 allow hal_audio_default self:socket { create create_socket_perms ioctl read };
 allow hal_audio_default unlabeled:file { getattr open read };
 allow hal_audio_default sysfs:file { open read };
+allow hal_audio_default audio_prop:file read;
+allow hal_audio_default default_prop:file read;

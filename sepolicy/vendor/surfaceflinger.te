@@ -1,0 +1,4 @@
+allow surfaceflinger bootanim:dir search;
+allow surfaceflinger system_server:process getattr;
+allow surfaceflinger bootanim:file read;
+allow surfaceflinger default_android_service:service_manager { add find };

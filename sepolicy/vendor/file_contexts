@@ -48,7 +48,7 @@
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software             u:object_r:hal_gatekeeper_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.gnss@1\.0-service\.apq8084                    u:object_r:hal_gnss_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.samsung                      u:object_r:hal_ir_default_exec:s0
-/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.samsung                   u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.apq8084                   u:object_r:hal_light_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.apq8084               u:object_r:hal_lineage_livedisplay_qti_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock         u:object_r:hal_power_stats_default_exec:s0
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.fastcharge@1\.0-service\.samsung                u:object_r:hal_lineage_fastcharge_default_exec:s0
@@ -66,7 +66,6 @@
 /sys/devices/i2c\.[0-9]+/i2c-[0-9]+/[0-9]+-[a-z0-9]+/power_supply(/.*)?                      u:object_r:sysfs_batteryinfo:s0
 
 # sysfs - block/storage
-/sys/devices/msm_sdcc\.[0-9]/mmc_host/mmc[0-9]/mmc[0-9]:[0-9]+/block/mmcblk[0-9]/bkops_en    u:object_r:sysfs_io_sched_tuneable:s0
 /sys/devices/msm_sdcc\.[0-9]/mmc_host/mmc[0-9]/power(/.*)?                                   u:object_r:sysfs_mmc_host:s0
 
 # sysfs - bluetooth
@@ -97,6 +96,10 @@
 /sys/devices/virtual/graphics/fb0/csc_cfg                                                    u:object_r:sysfs_graphics:s0
 /sys/devices/virtual/lcd/panel(/.*)?                                                         u:object_r:sysfs_graphics:s0
 /sys/devices/platform/gpusysfs(/.*)?                                                         u:object_r:sysfs_graphics:s0
+
+# radio
+/data/data/com.android.providers.telephony/databases(/.*)?       u:object_r:radio_core_data_file:s0
+/data/data/com.android.providers.telephony/shared_prefs(/.*)?    u:object_r:radio_core_data_file:s0
 
 # sysfs - leds
 /sys/devices/i2c\.[0-9]+/i2c-[0-9]+/[0-9]+-[a-z0-9]+/leds(/.*)?                              u:object_r:sysfs_leds:s0

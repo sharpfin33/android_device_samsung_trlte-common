@@ -10,3 +10,5 @@ allow vold {
     efs_block_device
     system_block_device
 }:blk_file getattr;
+
+allow vold vdc:process getattr;

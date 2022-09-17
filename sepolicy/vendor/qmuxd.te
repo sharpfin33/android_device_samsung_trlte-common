@@ -1,3 +1,5 @@
 allow qmuxd system_file:file entrypoint;
 allow qmuxd sysfs:dir { open read };
 allow qmuxd sysfs:file read;
+allow qmuxd default_prop:file read;
+allow qmuxd radio_prop:file read;

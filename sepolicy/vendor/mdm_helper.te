@@ -6,3 +6,4 @@ allow mdm_helper sysfs:dir { open read };
 allow mdm_helper sysfs:file read;
 allow mdm_helper system_file:file entrypoint;
 allow mdm_helper firmware_file:dir { add_name write};
+allow mdm_helper default_prop:file read;
