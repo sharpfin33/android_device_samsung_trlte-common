@@ -165,6 +165,8 @@ wifi.interface=wlan0
 wifi.direct.interface=p2p-dev-wlan0
 
 # ADB
+persist.adb.nonblocking_ffs=0
+ro.adb.nonblocking_ffs=0
 persist.service.adb.enable=1
 persist.service.debuggable=1
 persist.sys.usb.config=mtp,adb
