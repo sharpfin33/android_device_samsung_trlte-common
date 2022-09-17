@@ -139,7 +139,8 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 
 TARGET_LD_SHIM_LIBS := \
     /system/vendor/lib/libsec-ril.so|/system/vendor/lib/libprotobuf-cpp-full.so \
-    /system/vendor/lib/libloc_eng.so|/system/lib/libshim_loc.so
+    /system/vendor/lib/libloc_eng.so|/system/lib/libshim_loc.so \
+    /system/vendor/lib/libshim_camera|/system/vendor/lib/hw/camera.vendor.apq8084.so
 
 # Legacy memfd
 TARGET_HAS_MEMFD_BACKPORT := true
