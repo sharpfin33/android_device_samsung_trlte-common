@@ -414,6 +414,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/filter_ie:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/filter_ie \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
+# seccomp policy hax: exclude code_coverage.arm.policy
+$(shell cp -r device/samsung/trlte-common/seccomp/mod/mediacodec-arm.policy frameworks/av/services/mediacodec/seccomp_policy/mediacodec-arm.policy)
+$(shell cp -r device/samsung/trlte-common/seccomp/mod/mediaswcodec-arm.policy frameworks/av/services/mediacodec/seccomp_policy/mediaswcodec-arm.policy)
+$(shell cp -r device/samsung/trlte-common/seccomp/mod/mediaextractor-arm.policy frameworks/av/services/mediaextractor/seccomp_policy/mediacodec-arm.policy)
 
 # Common Qualcomm
 $(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
