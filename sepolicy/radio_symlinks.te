@@ -1,0 +1,11 @@
+type radio_symlinks, domain;
+type radio_symlinks_exec, exec_type, file_type;
+init_daemon_domain(radio_symlinks)
+
+type_transition radio_symlinks system_data_root_file:file radio_data_file ".cid.info";
+
+allow radio_symlinks radio_data_file:dir rw_dir_perms;
+allow radio_symlinks radio_data_file:file create_file_perms;
+allow radio_symlinks radio_data_file:lnk_file {read create unlink};
+allow radio_symlinks system_data_root_file:lnk_file r_file_perms;
+

@@ -1,0 +1,2 @@
+allow hal_lineage_fastcharge_default init:unix_stream_socket connectto;
+allow hal_lineage_fastcharge_default vendor_default_prop:property_service set;

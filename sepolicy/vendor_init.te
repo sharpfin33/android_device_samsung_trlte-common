@@ -5,9 +5,24 @@ allow vendor_init sysfs:dir relabelfrom;
 allow vendor_init sysfs:file relabelfrom;
 allow vendor_init system_data_root_file:file { create open setattr write };
 allow vendor_init system_data_root_file:lnk_file { create unlink };
+
+allow vendor_init system_data_file:file { create open setattr write };
+allow vendor_init system_data_file:lnk_file { create unlink };
+
 allow vendor_init wifi_data_file:file { create getattr open setattr write };
 allow vendor_init sec_efs_file:dir relabelfrom;
 allow vendor_init sec_efs_file:file relabelfrom;
 allow vendor_init unlabeled:dir search;
 allow vendor_init unlabeled:file setattr;
 allow vendor_init rootfs:dir setattr;
+allow vendor_init radio_data_file:lnk_file { unlink } ;
+allow vendor_init cache_file:dir { search write add_name create getattr setattr } ;
+
+#allow vendor_init radio_data_file:lnk_file { read create getattr setattr relabelfrom relabelto unlink } ;
+#allow vendor_init radio_data_file:fifo_file { read create getattr setattr relabelfrom relabelto unlink open } ;
+#allow vendor_init radio_data_file:dir { ioctl read write create getattr setattr relabelfrom relabelto open add_name remove_name search rmdir } ;
+#allow vendor_init radio_data_file:blk_file relabelto ;
+#allow vendor_init radio_data_file:file { read write create getattr setattr lock relabelfrom relabelto append map unlink open } ;
+#allow vendor_init radio_data_file:sock_file { read create getattr setattr relabelfrom relabelto unlink open } ;
+#allow vendor_init radio_data_file:chr_file relabelto ;
+#allow vendor_init radio_symlinks:file read;

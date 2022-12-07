@@ -111,6 +111,9 @@ on post-fs
     chown wifi wifi /sys/module/dhd/parameters/firmware_path
     chown wifi wifi /sys/module/dhd/parameters/nvram_path
 
+    mkdir /cache/logs 0775 system log
+    #start persistentLogging
+
 on post-fs-data
 
     # Remove dalvik files that cause modem issues
@@ -1291,6 +1294,16 @@ service wifiloader /system/vendor/bin/wifiloader
      oneshot
      seclabel u:r:wifiloader:s0
 
+service persistentLogging /system/bin/logcat -r 10240 -n 9 -v threadTime -f /cache/logs/log
+    user system
+    group system log
+    disabled
+
+service radio_symlinks /system/vendor/bin/sh /system/vendor/etc/init/hw/radio_symlinks.sh
+    class late_start
+    user root 
+    oneshot
+
 on property:init.svc.macloader=stopped
     chown system root /data/.cid.info
     chmod 0664 /data/.cid.info
@@ -1338,9 +1351,10 @@ on property:sys.boot_completed=1
     # Late chown to make sure the kernel can access the device
     chown media audio /dev/ttyHS3
 
-    # Symlink directories to access telephony.db and preferred-apn.xml required by libsec-ril
+    # symlink directories to access telephony.db and preferred-apn.xml required by libsec-ril
     symlink /data/user_de/0/com.android.providers.telephony/databases /data/data/com.android.providers.telephony/databases
     symlink /data/user_de/0/com.android.providers.telephony/shared_prefs /data/data/com.android.providers.telephony/shared_prefs
+    #start radio_symlinks
 
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)

@@ -306,6 +306,7 @@ PRODUCT_PACKAGES += \
     init.qcom.power.rc \
     init.qcom.usb.rc \
     init.sec.boot.sh \
+    radio_symlink.sh \
     ueventd.qcom.rc
 
 # RenderScript HAL
