@@ -1341,6 +1341,7 @@ on property:sys.boot_completed=1
     # Symlink directories to access telephony.db and preferred-apn.xml required by libsec-ril
     symlink /data/user_de/0/com.android.providers.telephony/databases /data/data/com.android.providers.telephony/databases
     symlink /data/user_de/0/com.android.providers.telephony/shared_prefs /data/data/com.android.providers.telephony/shared_prefs
+    restorecon recursive /data/data/com.android.providers.telephony
 
 on property:ro.data.large_tcp_window_size=true
     # Adjust socket buffer to enlarge TCP receive window for high bandwidth (e.g. DO-RevB)
